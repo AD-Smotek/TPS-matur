@@ -1,9 +1,12 @@
 sitove rozhrani neboli fyzicka a spojova v osi
 prevadi data na signal 1,0
-dela ramec
-pouziva mac na prenos v Lan pridava je do ramce
-chyby crc/fcs
-rizeni pristupu k mediu csma/ca(dotaz) csma/cd(bez dotazu/boj)
+podvrstvy llc a mac 
+llc zjisti jaky protokol pouzival nahoze na vrstve a taky logicke spojeni mezi L2 a L3
+mac 
+-dela ramec
+-pouziva mac na prenos v Lan pridava je do ramce
+-chyby crc/fcs
+-rizeni pristupu k mediu csma/ca(dotaz) csma/cd(bez dotazu/boj)
 protokol ehthernet protokol:
 -urcuje rychlost
 -pouziva mac adresy
@@ -20,3 +23,17 @@ sitova karta nic
 switch L2
 hub
 AP dnes soucast basic routeru spolu s switchem
+fyzicke veci jako kabely a tak
+signaly:
+elektro 
+radio
+optik
+
+elektro (coax) hlavne kroucena dvojlinka utp vubec  stp celej stinenej ftp stineno jen celek
+cat 5 100Mb 100MHZ
+cat 5e 1000Mb 250MHZ
+cat 6a 10000Mb 500MHZ
+cat 7 10000Mb 600-1000MHZ
+rj-45 forma b se pouziva
+koax historie lepsi odolnost a bus sbernice
+optika 
