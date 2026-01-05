@@ -1,0 +1,216 @@
+sítová vrstva v tcp ip to je internetová
+pracuje s ip adresami neboli logické adresy 
+pro směrováni pocketu používa routery 
+umožnuje komnikaci v vzdalenych sitich pomoci ip adres a routeru
+používa protokoly pro smerovani jako ospf a taky rip kazdy funguje trochu jinak
+ospf pouziva nejrychlejsi cestu takze hlavne rychlost kabelu a moc nepouziva v vypctu hopy
+rip prave pouziva hlavne hopyy jako ukazku rychlosti takze co je nejmin hopu je nejrychlejsi ale to hodnekrat tak neni
+taky vybira optimalni cestu pro paket
+a muze frakmentovat paket pokud musi rozdelit kvuli prenosu na mediu a pak ho zase slozi defragmentace
+ipv4-v6 protokol v verzi v4 neboli pracuje s ipv4 a verzi v6 pracuje s ipv6 
+-nespolehlivi
+-neoveruje zda ho poslocha dalsi zarizeni
+-neresi pretizenost site 
+dalsi protokol icmp 
+-nedostupnost a diagnosticka hlaseni ve stylu(proc a nebo co je spatne)
+ipsec(security)
+-zapezpecuje ip komunikaci
+-sifruje komunikaci a chce overeni ze jste ta osoba
+hlavni zarizeni L3 sitove
+-router 
+-switch L3
+
+transportni vrstva L4
+ridi spolehlivost prenosu a rizeni prenosu
+hlavni prvky
+-segmentace skladani dat
+-rizeni toku
+-detekce chyb
+-rizeni spojeni
+-adresy portu
+protokoly :
+tcp - spolehlivy pomaly prijde to v spravnym poradi taky posila zpatky zda vse ok ACK hlavne se pouziva tam kde nesmi byt chyba i kdyz to bude chvili trvat 
+http
+ftp
+smtp
+pop3
+imap
+udp - opak tcp nespolehlivy neprijde to v spravnym poradi ale rychly hlavne se poziva kde to musi byt rychly DNS VoIP streanovani online hry
+porty ukazujou kam to ma vse chodit
+
+
+
+Síťová a transportní vrstva (TCP/IP)
+1️⃣ Síťová vrstva – Internetová vrstva (TCP/IP)
+
+Síťová vrstva v modelu TCP/IP se nazývá internetová vrstva.
+Zajišťuje přenos dat mezi vzdálenými sítěmi pomocí logických (IP) adres a směrovacích zařízení.
+
+🔹 Základní funkce síťové vrstvy
+
+práce s IP adresami (logické adresy)
+
+směrování paketů mezi sítěmi
+
+výběr optimální cesty pro paket
+
+umožňuje komunikaci mezi vzdálenými sítěmi
+
+fragmentace a defragmentace paketů
+
+➡️ Přenos mezi sítěmi probíhá pomocí routerů.
+
+🔹 Směrování (routing)
+
+Síťová vrstva používá směrovací protokoly, které rozhodují, kudy budou pakety přenášeny.
+
+🔸 OSPF (Open Shortest Path First)
+
+dynamický směrovací protokol
+
+vybírá nejrychlejší cestu
+
+bere v úvahu cenu linky (rychlost, propustnost)
+
+nepočítá primárně počet hopů
+
+🔸 RIP (Routing Information Protocol)
+
+používá počet hopů jako metriku
+
+cesta s nejmenším počtem hopů je považována za nejlepší
+
+max. 15 hopů
+
+méně přesný, dnes spíše zastaralý
+
+➡️ Nejmenší počet hopů neznamená vždy nejrychlejší cestu.
+
+🔹 Protokoly síťové vrstvy
+🌐 IP (Internet Protocol)
+
+základní protokol síťové vrstvy
+
+nespolehlivý
+
+bez potvrzování doručení
+
+neřeší přetížení sítě
+
+pouze doručuje pakety na cílovou IP adresu
+
+Verze:
+
+IPv4
+
+IPv6
+
+📢 ICMP (Internet Control Message Protocol)
+
+diagnostická a chybová hlášení
+
+informuje o nedostupnosti cíle
+
+používá se např. příkazem ping
+
+🔐 IPsec (IP Security)
+
+zabezpečení IP komunikace
+
+šifrování dat
+
+autentizace komunikujících stran
+
+🔹 Síťová zařízení (L3)
+
+router
+
+L3 switch
+
+2️⃣ Transportní vrstva – L4
+
+Transportní vrstva zajišťuje komunikaci mezi aplikacemi na koncových zařízeních
+a stará se o spolehlivost přenosu dat.
+
+🔹 Hlavní funkce transportní vrstvy
+
+segmentace a skládání dat
+
+řízení toku
+
+detekce chyb
+
+řízení spojení
+
+adresace pomocí portů
+
+🔹 Protokoly transportní vrstvy
+🔸 TCP (Transmission Control Protocol)
+
+spojovaný protokol
+
+spolehlivý
+
+zajišťuje správné pořadí dat
+
+potvrzuje doručení pomocí ACK
+
+vyšší režie → pomalejší
+
+Použití:
+
+HTTP / HTTPS
+
+FTP
+
+SMTP
+
+POP3
+
+IMAP
+
+➡️ Používá se tam, kde nesmí dojít ke ztrátě dat.
+
+🔸 UDP (User Datagram Protocol)
+
+nespojovaný protokol
+
+nespolehlivý
+
+nezaručuje pořadí ani doručení
+
+velmi rychlý
+
+Použití:
+
+DNS
+
+VoIP
+
+streamování
+
+online hry
+
+➡️ Používá se tam, kde je důležitější rychlost než přesnost.
+
+🔹 Porty
+
+určují, které aplikaci jsou data určena
+
+rozsah: 0–65535
+
+Rozdělení portů:
+
+well-known: 0–1023
+
+registered: 1024–49151
+
+dynamic: 49152–65535
+
+3️⃣ Krátké srovnání TCP × UDP (ideální k naučení)
+TCP	UDP
+spojovaný	nespojovaný
+spolehlivý	nespolehlivý
+potvrzuje data	nepotvrzuje
+pomalejší	rychlejší
+web, e-mail	VoIP, DNS, hry
