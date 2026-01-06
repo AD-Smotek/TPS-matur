@@ -1,0 +1,69 @@
+Aktivní síťové prvky:
+potřebují napájení
+aktivně zpracovávají signál a data
+rozhodují, kam data pošlou
+pracují na různých vrstvách OSI
+
+sitova karta nic
+propojuje sarizeni
+pracuje na l1 l2
+mam mac adresu
+muze byt pripojena kabelem ci bezdrat
+
+hub rozbocovac - hystorie
+pracuje na l1
+posila data na vsechny porty broadcast
+nevhodny muze byt kolize kvuli zatizeni media nizka bezpecnost
+blbej switch
+
+switch
+pracuje na L2 ale i na L3
+posila data podle sve cam tabulky kde ma mac adresy na portech
+snizuje procento kolizi
+rychlejsi nez hub
+aby zjistil kde kdo je taky zaplavuje posle broadcast
+pouziva qos jako system priorit
+za urcenou casovou linii si mac zapomene co ma v tabulce casto krat to je 5min
+taguje veci ktery jdou do dalsiho switche
+a dela vlany pro lepsi prehlednost nebo proste setreni zarizenimi
+nebo taky ze nechcete aby ty lidi se videli ze jsou v siti
+umi taky fullduplex ale taky zalezi na kabelu
+
+L3 switch 
+pracuje na L2 jako normal switch ale umi i L3 
+je drahy jak hovado
+prepina i smeruje 
+rychlejsi nez router v Lan
+
+Router smerovac
+pracuje na L3
+smeruje 
+pracuje na IP
+propojuje Lany a mezi nima vznika Wan
+NAT preklad privatnich na verejne funguje u IPv4 u IPv6 trochu jinak
+dhcp prirazeni IP adresy a masky i brany
+firewall ochrana na routeru proti hrozbam
+
+AP 
+soucast dnesniho routeru
+propojuje zarizeni v Lan bezdratove
+pracuje na L2
+
+repeater opakovac
+pracuje na L1
+obnovuje zesiluje signal hlavne u krouceny dvojlinky
+
+bridge 
+pracuje na L2
+propojuje segmenty site 
+dnes nahrazen switchem
+
+firewall 
+bezpecnost
+filtruje provoz dat na router
+pracuje na L3-L7
+
+Modem
+pravadi signal optik na metalica treba 
+umoznuje pristup k internetu
+
