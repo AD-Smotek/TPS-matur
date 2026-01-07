@@ -22,12 +22,15 @@ posila data podle sve cam tabulky kde ma mac adresy na portech
 snizuje procento kolizi
 rychlejsi nez hub
 aby zjistil kde kdo je taky zaplavuje posle broadcast
-pouziva qos jako system priorit
+pouziva qos jako system priorit funguje tak ze zacatecni zarizeni da tu prioritu a pak se jen checkuje nebo meni
 za urcenou casovou linii si mac zapomene co ma v tabulce casto krat to je 5min
 taguje veci ktery jdou do dalsiho switche
 a dela vlany pro lepsi prehlednost nebo proste setreni zarizenimi
 nebo taky ze nechcete aby ty lidi se videli ze jsou v siti
 umi taky fullduplex ale taky zalezi na kabelu
+pouziva radius server - funguje jako client server ale ty nejsi client ale jsi neste neco min takze to zarizeni ktery se pta zavas switch ap router
+a tak dal je client a server je ten radius a rozhoduje jestli ho pusti
+aaa kouka taky na mac heslo jmeno kdo jsi 
 
 L3 switch 
 pracuje na L2 jako normal switch ale umi i L3 
