@@ -25,9 +25,18 @@ efektivní vyuziti adres
 | Podsítě          | Rozsah      |
 | ---------------- | ----------- 
 | 192.168.1.0/26   | .1 – .62    |
-| 192.168.1.64/26  | .65 – .126  |  
-| 192.168.1.128/26 | .129 – .190 |
+| 192.168.1.64/26  | .65 – .126  |         toto je fixed ale da se delat i variable a tam se porad meni maska a kolik hostu v jedne podsiti
+| 192.168.1.128/26 | .129 – .190 |         to se dela kolik na n tou tak odectes od 32 a mas masku
 | 192.168.1.192/26 | .193 – .254 |
 hceme 4 podsite kolik na druhou je 4 2 na 2 takze k masce pricteme to na kolikatou to musime dat
 takze mame 24 normal a k tomu dame dve takze nova maska je 26 a kazda 
 
+
+ipv6 proc nedostatek ipv4 
+lepsi zabezpeceni
+jednodusi smerovani zadny nat
+ma 128 bit hexadecimal
+oddeleno dvojteckami jen jednou muzeme pouzit dvoutecku jako zkratku
+nema broadcast schovava se v multicastu
+deli se na prefix interface id 
+obrovksy pocet adress takze se podsitovani moc nedela 
