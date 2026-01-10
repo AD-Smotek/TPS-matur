@@ -1,0 +1,8 @@
+1️ Co je Ethernet
+Ethernet (IEEE 802.3)
+nejrozšířenější technologie pro LAN
+definuje:
+formát rámce
+přístup k médiu -csma/cd nepouziva csma/ca predchazi kolizi
+rychlosti podle zarizeni jak se schopny rychle prijimat nebo jak
+kabeláž
