@@ -1,8 +1,117 @@
-1️ Co je Ethernet
-Ethernet (IEEE 802.3)
-nejrozšířenější technologie pro LAN
-definuje:
-formát rámce
-přístup k médiu -csma/cd nepouziva csma/ca predchazi kolizi
-rychlosti podle zarizeni jak se schopny rychle prijimat nebo jak
-kabeláž
+# Ethernet a přístupové metody
+
+## Ethernet – obecně
+Ethernet je **nejpoužívanější síťová technologie pro lokální sítě (LAN)**.  
+Je standardizován organizací **IEEE 802.3** a pracuje na:
+
+- **fyzické vrstvě (L1)**
+- **linkové vrstvě (L2)** modelu OSI
+
+Ethernet určuje:
+- formát rámce
+- způsob adresace (MAC)
+- rychlost přenosu
+- přístup k přenosovému médiu
+- detekci chyb
+
+---
+
+## Základní vlastnosti Ethernetu
+- přenos dat pomocí **rámců**
+- používá **MAC adresy** (48 bitů, hexadecimálně)
+- podporuje **half-duplex i full-duplex**
+- detekuje chyby pomocí **CRC / FCS**
+- funguje převážně v topologii **hvězda**
+
+---
+
+## Ethernetový rámec
+Rámec obsahuje:
+- **Preamble** – synchronizace přenosu
+- **Destination MAC**
+- **Source MAC**
+- **Type / Length**
+- **Data**
+- **FCS (CRC)** – kontrola chyb
+
+---
+
+## Přístupové metody k médiu
+Přístupová metoda určuje, **jak zařízení přistupují ke společnému přenosovému médiu**, aby nedocházelo ke kolizím.
+
+---
+
+## CSMA/CD (Carrier Sense Multiple Access / Collision Detection)
+Používá se v **drátovém Ethernetu (historicky)**.
+
+### Princip:
+1. zařízení poslouchá, zda je médium volné
+2. pokud je volné, začne vysílat
+3. pokud dojde ke kolizi:
+   - zařízení kolizi **detekuje**
+   - přeruší přenos
+   - počká náhodný čas
+   - zkusí znovu
+
+### Vlastnosti:
+- funguje pouze v **half-duplexu**
+- kolize jsou běžné
+- dnes **nepoužívané** (huby)
+
+### Použití:
+- staré sítě s huby
+- koaxiální Ethernet
+
+---
+
+## CSMA/CA (Carrier Sense Multiple Access / Collision Avoidance)
+Používá se v **bezdrátových sítích (Wi-Fi)**.
+
+### Princip:
+1. zařízení zjišťuje, zda je médium volné
+2. pokud je volné, **pošle žádost o vysílání**
+3. pokud nedojde ke kolizi, začne přenos
+4. při kolizi čeká a zkusí znovu
+
+### Vlastnosti:
+- kolizím se **předchází**, neodhalují se
+- vyšší režie
+- menší efektivita než kabel
+
+### Použití:
+- Wi-Fi (IEEE 802.11)
+
+---
+
+## Přístup k médiu dnes
+V moderních sítích:
+- se používají **switche**
+- každý port má vlastní kolizní doménu
+- běží **full-duplex**
+- **kolize prakticky neexistují**
+- CSMA/CD se nepoužívá
+
+---
+
+## Duplex
+- **Half-duplex** – vysílání nebo příjem (ne současně)
+- **Full-duplex** – vysílání i příjem současně
+
+---
+
+## Rychlosti Ethernetu (příklady)
+- 10 Mb/s – Ethernet
+- 100 Mb/s – Fast Ethernet
+- 1 Gb/s – Gigabit Ethernet
+- 10 Gb/s – 10G Ethernet
+
+---
+
+## Shrnutí
+Ethernet je základní technologie LAN sítí.
+Přístupové metody řeší sdílení přenosového média:
+- **CSMA/CD** – drátové sítě (historicky)
+- **CSMA/CA** – bezdrátové sítě
+
+Moderní Ethernet používá switche a full-duplex,
+takže kolize již prakticky neexistují.
