@@ -1,1 +1,170 @@
 
+# Směrování (Routing) a routery
+
+## Směrování – obecně
+Směrování (routing) je proces, při kterém se rozhoduje,
+**jakou cestou bude paket přenesen z jedné sítě do druhé**.
+
+Směrování:
+- pracuje na **síťové vrstvě (L3)** modelu OSI
+- využívá **IP adresy**
+- umožňuje komunikaci mezi **různými sítěmi**
+- probíhá pomocí **routerů**
+
+---
+
+## Router – obecně
+Router (směrovač) je síťové zařízení, které:
+- propojuje různé sítě (LAN ↔ WAN)
+- směruje pakety podle IP adres
+- rozhoduje, kudy paket odešle dál
+- odděluje **broadcast domény**
+
+Router pracuje na **síťové vrstvě (L3)**.
+
+---
+
+## Základní funkce routeru
+- směrování paketů
+- výběr nejlepší cesty
+- oddělení sítí
+- přeposílání paketů mezi rozhraními
+- podpora směrovacích protokolů
+- filtrování provozu (ACL, firewall)
+- NAT (překlad adres)
+- DHCP server / relay
+- VPN
+
+---
+
+## Směrovací tabulka
+Router používá **směrovací tabulku**, ve které má uložené:
+- cílovou síť
+- masku sítě
+- výchozí bránu (next hop)
+- výstupní rozhraní
+- metriku (cenu cesty)
+
+Směrovací tabulka vzniká:
+- ručně (statické směrování)
+- automaticky (dynamické směrování)
+
+---
+
+## Typy směrování
+
+### Statické směrování
+- trasy se zadávají ručně
+- jednoduché
+- žádná automatická reakce na výpadek
+
+**Výhody:**
+- nízká zátěž
+- vysoká bezpečnost
+- plná kontrola
+
+**Nevýhody:**
+- špatná škálovatelnost
+- nevhodné pro velké sítě
+
+**Použití:**
+- malé sítě
+- výchozí brána (default route)
+
+---
+
+### Dynamické směrování
+- routery si cesty vyměňují automaticky
+- reaguje na změny v síti
+- používá směrovací protokoly
+
+**Výhody:**
+- automatická aktualizace cest
+- odolnost proti výpadkům
+
+**Nevýhody:**
+- složitější
+- vyšší režie
+
+---
+
+## Směrovací protokoly
+
+### RIP (Routing Information Protocol)
+- jednoduchý dynamický protokol
+- používá **počet hopů** jako metriku
+- maximálně **15 hopů**
+- pomalá konvergence
+- dnes zastaralý
+
+---
+
+### OSPF (Open Shortest Path First)
+- moderní dynamický protokol
+- **link-state** algoritmus
+- vybírá nejrychlejší cestu
+- bere v úvahu **cenu linky**
+- rychlá konvergence
+- vhodný pro střední a velké sítě
+
+---
+
+### (Doplňkově – nemusíš říkat, ale je dobré vědět)
+- **BGP** – směrování mezi autonomními systémy (internet)
+
+---
+
+## Metrika
+Metrika určuje, **která cesta je nejlepší**.
+
+Příklady metrik:
+- počet hopů (RIP)
+- propustnost linky
+- zpoždění
+- cena linky (OSPF)
+
+---
+
+## Fragmentace a defragmentace
+Pokud je paket větší než maximální velikost přenosu (MTU):
+- router může paket **fragmentovat**
+- cílové zařízení provede **defragmentaci**
+
+---
+
+## NAT (Network Address Translation)
+- překlad privátních IP adres na veřejnou
+- používá se hlavně u **IPv4**
+- šetří veřejné IP adresy
+- skrývá vnitřní síť
+
+Typy NAT:
+- statický
+- dynamický
+- PAT (překlad portů)
+
+---
+
+## Router vs. L3 switch
+
+| Router | L3 switch |
+|------|----------|
+| pracuje na L3 | L2 + L3 |
+| pomalejší | rychlejší v LAN |
+| propojuje LAN ↔ WAN | směrování v LAN |
+| bohatší funkce | dražší |
+
+---
+
+## Routery v praxi
+- domácí router (Wi-Fi, NAT, firewall)
+- firemní router
+- směrovače poskytovatelů internetu
+
+---
+
+## Shrnutí
+Směrování umožňuje komunikaci mezi sítěmi.
+Router rozhoduje, kudy budou pakety přenášeny.
+Používá směrovací tabulku a statické nebo dynamické protokoly.
+Bez routerů by neexistoval internet.
