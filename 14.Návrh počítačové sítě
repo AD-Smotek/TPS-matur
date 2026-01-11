@@ -1,0 +1,146 @@
+# Návrh počítačové sítě
+
+## Co je návrh počítačové sítě
+Návrh počítačové sítě je proces plánování a vytvoření sítě tak,
+aby byla:
+- funkční
+- bezpečná
+- spolehlivá
+- rozšiřitelná
+- cenově efektivní
+
+Cílem je zajistit správnou komunikaci mezi zařízeními a službami.
+
+---
+
+## Analýza požadavků
+Před návrhem sítě je nutné zjistit:
+
+- počet uživatelů
+- počet zařízení (PC, notebooky, telefony, tiskárny, IoT)
+- typy služeb (internet, tisk, servery)
+- požadovanou rychlost
+- úroveň zabezpečení
+- možnosti rozšíření do budoucna
+- rozpočet
+
+---
+
+## Typ sítě podle rozsahu
+- PAN – osobní síť
+- LAN – lokální síť
+- MAN – metropolitní síť
+- WAN – rozlehlá síť (internet)
+
+---
+
+## Topologie sítě
+Volba topologie ovlivňuje spolehlivost a výkon sítě.
+
+### Nejčastější topologie:
+- hvězda (nejpoužívanější)
+- strom (rozšířená hvězda)
+- mesh (velmi spolehlivá, drahá)
+
+---
+
+## Přenosové médium
+
+### Drátové:
+- kroucená dvojlinka (UTP, STP)
+- optické vlákno (single-mode, multi-mode)
+
+### Bezdrátové:
+- Wi-Fi
+- Bluetooth
+- mobilní sítě
+
+---
+
+## Aktivní síťové prvky
+- síťové karty
+- switche (L2, L3)
+- routery
+- access pointy
+- firewally
+
+---
+
+## Pasivní síťové prvky
+- kabeláž
+- patch panely
+- zásuvky
+- rozvaděče
+
+---
+
+## IP adresace
+- IPv4 / IPv6
+- veřejné vs. privátní adresy
+- podsíťování
+- DHCP vs. statické adresy
+
+---
+
+## Segmentace sítě
+- VLAN
+- oddělení uživatelů, serverů a hostů
+- zlepšení bezpečnosti a výkonu
+
+---
+
+## Směrování
+- statické směrování
+- dynamické směrování (OSPF, RIP)
+- výchozí brána
+
+---
+
+## Bezpečnostní návrh
+- firewall
+- NAT
+- VPN
+- IDS / IPS
+- zabezpečení Wi-Fi (WPA3)
+- silná autentizace
+
+---
+
+## Návrh serverových služeb
+- DHCP
+- DNS
+- file server
+- print server
+- mail server
+- web server
+- autentizační server
+
+---
+
+## Redundance a spolehlivost
+- záložní zdroje (UPS)
+- redundantní linky
+- RAID
+- zálohování dat
+
+---
+
+## Testování a dokumentace
+- test funkčnosti
+- měření rychlosti
+- bezpečnostní testy
+- síťová dokumentace
+  - schéma sítě
+  - IP plán
+  - seznam zařízení
+
+---
+
+## Shrnutí
+Správný návrh počítačové sítě zajišťuje:
+- stabilní provoz
+- bezpečnost
+- možnost rozšíření
+- jednoduchou správu
+
+Je základem kvalitní a dlouhodobě funkční infrastruktury.
