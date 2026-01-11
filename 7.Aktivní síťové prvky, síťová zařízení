@@ -1,72 +1,164 @@
-Aktivní síťové prvky:
-potřebují napájení
-aktivně zpracovávají signál a data
-rozhodují, kam data pošlou
-pracují na různých vrstvách OSI
+# Aktivní síťové prvky
 
-sitova karta nic
-propojuje sarizeni
-pracuje na l1 l2
-mam mac adresu
-muze byt pripojena kabelem ci bezdrat
+---
 
-hub rozbocovac - hystorie
-pracuje na l1
-posila data na vsechny porty broadcast
-nevhodny muze byt kolize kvuli zatizeni media nizka bezpecnost
-blbej switch
+## Základní charakteristika
 
-switch
-pracuje na L2 ale i na L3
-posila data podle sve cam tabulky kde ma mac adresy na portech
-snizuje procento kolizi
-rychlejsi nez hub
-aby zjistil kde kdo je taky zaplavuje posle broadcast
-pouziva qos jako system priorit funguje tak ze zacatecni zarizeni da tu prioritu a pak se jen checkuje nebo meni
-za urcenou casovou linii si mac zapomene co ma v tabulce casto krat to je 5min
-taguje veci ktery jdou do dalsiho switche
-a dela vlany pro lepsi prehlednost nebo proste setreni zarizenimi
-nebo taky ze nechcete aby ty lidi se videli ze jsou v siti
-umi taky fullduplex ale taky zalezi na kabelu
-pouziva radius server - funguje jako client server ale ty nejsi client ale jsi neste neco min takze to zarizeni ktery se pta zavas switch ap router
-a tak dal je client a server je ten radius a rozhoduje jestli ho pusti
-aaa kouka taky na mac heslo jmeno kdo jsi 
+**Aktivní síťové prvky:**
+- potřebují **napájení**
+- **aktivně zpracovávají signál a data**
+- rozhodují, **kam budou data odeslána**
+- pracují na **různých vrstvách OSI modelu**
+- zajišťují řízení, bezpečnost a efektivitu sítě
 
-L3 switch 
-pracuje na L2 jako normal switch ale umi i L3 
-je drahy jak hovado
-prepina i smeruje 
-rychlejsi nez router v Lan
+---
 
-Router smerovac
-pracuje na L3
-smeruje 
-pracuje na IP
-propojuje Lany a mezi nima vznika Wan
-NAT preklad privatnich na verejne funguje u IPv4 u IPv6 trochu jinak
-dhcp prirazeni IP adresy a masky i brany
-firewall ochrana na routeru proti hrozbam
+## Síťová karta (NIC – Network Interface Card)
 
-AP 
-soucast dnesniho routeru
-propojuje zarizeni v Lan bezdratove
-pracuje na L2
+- propojuje zařízení se sítí
+- pracuje na **L1 (fyzická)** a **L2 (spojová)**
+- má **unikátní MAC adresu**
+- může být:
+  - kabelová (Ethernet)
+  - bezdrátová (Wi-Fi)
+- převádí data na signál a naopak
 
-repeater opakovac
-pracuje na L1
-obnovuje zesiluje signal hlavne u krouceny dvojlinky
+---
 
-bridge 
-pracuje na L2
-propojuje segmenty site 
-dnes nahrazen switchem
+## Hub (rozbočovač) – historické zařízení
 
-firewall 
-bezpecnost
-filtruje provoz dat na router
-pracuje na L3-L7
+- pracuje na **L1**
+- přijme data a **odešle je na všechny porty (broadcast)**
+- **nerozlišuje adresy**
+- způsobuje:
+  - vysoký počet kolizí
+  - zatížení média
+  - nízkou bezpečnost
+- dnes se **nepoužívá**
+- často označován jako „hloupý switch“
 
-Modem
-pravadi signal optik na metalica treba 
-umoznuje pristup k internetu
+---
 
+## Switch (přepínač)
+
+- pracuje převážně na **L2**
+- moderní switche mohou pracovat i na **L3**
+- přeposílá data **podle MAC adres**
+- používá **CAM tabulku** (MAC adresa → port)
+
+**Vlastnosti:**
+- výrazně snižuje kolize
+- je rychlejší než hub
+- podporuje **full-duplex**
+- při neznámé MAC adrese:
+  - odešle rámec jako broadcast (flooding)
+
+**Další funkce:**
+- **VLAN** – rozdělení sítě na logické části
+- **QoS** – priorita provozu (např. hlas, video)
+- **MAC aging** – po určité době (např. 5 minut) zapomene MAC adresy
+- **tagování rámců** mezi switche (802.1Q)
+
+---
+
+## Autentizace a AAA
+
+- switch může používat **RADIUS server**
+- funguje na principu **client–server**
+- switch / AP / router = klient
+- RADIUS server = rozhoduje, zda povolí přístup
+
+**AAA:**
+- Authentication – ověření identity
+- Authorization – oprávnění
+- Accounting – záznam činnosti
+
+---
+
+## L3 Switch
+
+- kombinuje funkce **switche a routeru**
+- pracuje na **L2 i L3**
+- umí:
+  - přepínat rámce
+  - směrovat IP pakety
+- velmi rychlý v LAN
+- dražší než běžný switch
+- používá se ve větších sítích
+
+---
+
+## Router (směrovač)
+
+- pracuje na **L3**
+- směruje data podle **IP adres**
+- propojuje:
+  - různé LAN sítě
+  - LAN ↔ WAN (internet)
+
+**Funkce routeru:**
+- **NAT** – překlad privátních IPv4 adres na veřejnou
+- **DHCP** – přidělování IP adres, masky, brány
+- **Firewall** – ochrana proti síťovým hrozbám
+- směrovací tabulka
+
+---
+
+## Access Point (AP)
+
+- zajišťuje **bezdrátový přístup do LAN**
+- pracuje na **L2**
+- používá MAC adresy
+- dnes je často:
+  - součástí routeru
+  - nebo samostatné zařízení
+- propojuje Wi-Fi zařízení s kabelovou sítí
+
+---
+
+## Repeater (opakovač)
+
+- pracuje na **L1**
+- **obnovuje a zesiluje signál**
+- prodlužuje maximální délku kabelu
+- používá se hlavně u:
+  - kroucené dvojlinky
+  - bezdrátového signálu
+
+---
+
+## Bridge (most)
+
+- pracuje na **L2**
+- propojuje síťové segmenty
+- filtruje provoz podle MAC adres
+- dnes je **nahrazen switchem**
+
+---
+
+## Firewall
+
+- bezpečnostní zařízení
+- filtruje síťový provoz
+- pracuje na **L3 až L7**
+- kontroluje:
+  - IP adresy
+  - porty
+  - protokoly
+  - obsah komunikace
+- může být:
+  - samostatné zařízení
+  - součást routeru
+
+---
+
+## Modem
+
+- převádí signál mezi různými typy médií
+- např.:
+  - optika ↔ metalika
+  - kabel ↔ DSL
+- umožňuje **přístup k internetu**
+- pracuje převážně na **L1**
+
+---
