@@ -1,4 +1,4 @@
-# Bezdrátové sítě (Wireless Networks)
+v# Bezdrátové sítě (Wireless Networks)
 
 ## Bezdrátové sítě – obecně
 Bezdrátové sítě umožňují **přenos dat bez použití kabelů**
@@ -134,6 +134,16 @@ Bezdrátové sítě používají **CSMA/CA**:
 - WPA – zastaralé
 - WPA2 – běžně používané
 - WPA3 – nejbezpečnější
+
+---
+
+## Základní princip WPA
+WPA funguje tak, že:
+1. ověří uživatele (heslo / server)
+2. vytvoří **šifrovací klíče**
+3. šifruje komunikaci mezi klientem a přístupovým bodem (AP)
+
+---
 
 ### Autentizace
 - heslo (PSK)
